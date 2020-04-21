@@ -1,7 +1,16 @@
 body {
     background-color: #EDEDED;
-    height: 500vh;
+    
   }
+.info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 100vh;
+}
   .circular-menu {
     position: fixed;
     bottom: 1em;
