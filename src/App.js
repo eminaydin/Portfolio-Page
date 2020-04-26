@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import 'font-awesome/css/font-awesome.min.css';
 import "./App.css"
+import UseAnimations from "react-useanimations"
 class App extends Component {
 constructor(props) {
   super(props);
   this.state = {
     leftIsClicked: false,
-    rightIsClicked: false,
+    rightIsClicked: true,
   }
  this.toggle = this.toggle.bind(this);
 }
@@ -25,14 +26,18 @@ constructor(props) {
   console.log(this.state.rightIsClicked);
   
   }
-  
+ 
+
+
   render() {
+    
     return (
-      <div className="div"> 
+      <div className="main"> 
       <div class="info">
 <p>Hello, my name is Emin Aydın. I'm a full-stack developer who likes the cats.</p>
 <p>Check out my latest works at my portfolio page.</p>
 <p>Feel free to contact me through eminaydin93@yahoo.com or from my contact page.</p>
+
   </div>
      <div id="circularMenu" className={`circular-menu ${this.state.rightIsClicked ? "active" : ""}`}>
 
@@ -41,10 +46,10 @@ constructor(props) {
         </a>
       
         <menu className="items-wrapper">
-          <a href="#" className="menu-item fa fa-facebook"></a>
-          <a href="#" className="menu-item fa fa-twitter"></a>
-          <a href="#" className="menu-item fa fa-google-plus"></a>
-          <a href="#" className="menu-item fa fa-linkedin"></a>
+        <a className="menu-item"> <UseAnimations animationKey="linkedin" style={{ padding: 9}} /> </a>
+          <a className="menu-item"> <UseAnimations animationKey="facebook" style={{ padding: 9}} /> </a>
+          <a className="menu-item"> <UseAnimations animationKey="github" style={{ padding: 9}} /> </a>
+           <a className="menu-item"> <UseAnimations animationKey="instagram" style={{ padding: 9}} /> </a>
         </menu>
       
       </div>
