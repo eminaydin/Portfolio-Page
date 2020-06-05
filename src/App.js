@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import 'font-awesome/css/font-awesome.min.css';
 import "./App.css"
-import UseAnimations from "react-useanimations"
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,14 +13,16 @@ import Contact from "./components/Contact";
 import Portfolio from "./components/Portfolio";
 import PageTransition from 'react-router-page-transition';
 import 'semantic-ui-css/semantic.min.css'
-
-
+import { FiFacebook, FiLinkedin, FiGithub } from "react-icons/fi"
+import { MdEmail } from "react-icons/md"
+import { AiFillGithub } from "react-icons/ai"
+import PortfolioCards from "./components/PortfolioCards";
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       leftIsClicked: false,
-      rightIsClicked: true,
+      rightIsClicked: false,
     }
 
   }
@@ -42,18 +43,18 @@ class App extends Component {
     return (
       <Router>
 
-        <div id="circularMenu" className={`circular-menu ${this.state.rightIsClicked && "active"}`}>
+        <div id="circularMenu" className={`circular-menu ${this.state.rightIsClicked ? "active" : ""}`}>
           <a className="floating-btn" onClick={this.toggle}>
             <i className="fa fa-plus"></i>
           </a>
           <menu className="items-wrapper">
-            <a className="menu-item"> <UseAnimations animationKey="linkedin" style={{ padding: 9 }} /> </a>
-            <a className="menu-item"> <UseAnimations animationKey="facebook" style={{ padding: 9 }} /> </a>
-            <a className="menu-item"> <UseAnimations animationKey="github" style={{ padding: 9 }} /> </a>
-            <a className="menu-item"> <UseAnimations animationKey="instagram" style={{ padding: 9 }} /> </a>
+
+            <a className="menu-item" href="https://www.linkedin.com/in/emin-aydin/" target="_blank"> <FiLinkedin size="1.5em" style={{ margin: " 10px" }} /> </a>
+            <a className="menu-item"> <MdEmail size="1.5em" style={{ margin: " 10px" }} /> </a>
+            <a className="menu-item" href="https://github.com/eminaydin" target="_blank"> <AiFillGithub size="1.5em" style={{ margin: " 10px" }} /> </a>
           </menu>
         </div>
-        <div id="circularMenu1" className={`circular-menu circular-menu-left ${this.state.leftIsClicked && "active"}`}>
+        <div id="circularMenu1" className={`circular-menu circular-menu-left ${this.state.leftIsClicked ? "active" : ""}`}>
           <a className="floating-btn" onClick={this.toggle1}>
             <i className="fa fa-bars"></i>
           </a>
@@ -65,14 +66,13 @@ class App extends Component {
           </menu>
         </div>
 
-        <PageTransition>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/contact" component={Contact} />
-            <Route path="/portfolio" component={Portfolio} />
-          </Switch>
-        </PageTransition>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/portfolio" component={PortfolioCards} />
+        </Switch>
+
       </Router>
 
     );
