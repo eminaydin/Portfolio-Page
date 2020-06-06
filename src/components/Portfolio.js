@@ -1,17 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   Modal,
   Button,
-  Header,
   Icon,
   Container,
-  Card,
-  Image,
   Menu,
 } from "semantic-ui-react";
 import data from "../data.json";
 import { readmeFiles } from "../helpers/Readmes";
-import { images } from "./Images";
 const Portfolio = (props) => {
   const [modalIsClosed, setModalIsClosed] = useState(true);
   const [index, setIndex] = useState(props.index);
@@ -61,10 +57,10 @@ const Portfolio = (props) => {
         <Modal.Content scrolling>
 
           <Modal.Description>
-            <Header></Header>
-            <Header as="h3" style={{ lineHeight: "3" }}>
-              <div dangerouslySetInnerHTML={createMarkup()}></div>
-            </Header>
+
+
+            <div dangerouslySetInnerHTML={createMarkup()}></div>
+
           </Modal.Description>
         </Modal.Content>
         <Modal.Actions>
