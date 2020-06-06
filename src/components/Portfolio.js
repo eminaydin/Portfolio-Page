@@ -10,7 +10,8 @@ import {
   Menu,
 } from "semantic-ui-react";
 import data from "../data.json";
-import { readmeFiles } from "./Readmes";
+import { readmeFiles } from "../helpers/Readmes";
+import { images } from "./Images";
 const Portfolio = (props) => {
   const [modalIsClosed, setModalIsClosed] = useState(true);
   const [index, setIndex] = useState(props.index);
@@ -29,17 +30,38 @@ const Portfolio = (props) => {
     <Container textAlign="center">
       <Modal open={modalIsClosed} onClose={closeModal}>
         <Menu>
-          <Menu.Item icon="language" />
-          <Menu.Item icon="language" position="right" />
+          <Menu.Item>
+            <Button
+              animated
+              onClick={() => setIndex(index - 1)}
+              disabled={index <= 0 ? true : false}
+            >
+              <Button.Content visible>Previous</Button.Content>
+              <Button.Content hidden>
+                <Icon name="arrow left" />
+              </Button.Content>
+            </Button>
+          </Menu.Item>
+          <Menu.Item position="right">
+            <Button
+              animated
+              onClick={() => setIndex(index + 1)}
+              disabled={index >= 8 ? true : false}
+            >
+              <Button.Content visible>Next</Button.Content>
+              <Button.Content hidden>
+                <Icon name="arrow right" />
+              </Button.Content>
+            </Button>
+          </Menu.Item>
         </Menu>
-        <Modal.Content image scrolling>
-          <Image
-            size="medium"
-            src="https://images.unsplash.com/photo-1591229677225-2e8fc742b80c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
-          />
+        <Modal.Header >
+          {data[index].name}
+        </Modal.Header>
+        <Modal.Content scrolling>
 
           <Modal.Description>
-            <Header>{data[index].name}</Header>
+            <Header></Header>
             <Header as="h3" style={{ lineHeight: "3" }}>
               <div dangerouslySetInnerHTML={createMarkup()}></div>
             </Header>

@@ -1,22 +1,24 @@
-.info {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
+.info,
+.aboutWrapper,
+.contactWrapper {
   height: 100vh;
-  font-family: "Montserrat Alternates", sans-serif;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
   font-size: 25px;
+  color: rgb(202, 202, 202);
 }
 
 #root {
   background-color: #2f2f2f;
+  display: flex;
 }
 
 .circular-menu {
   position: fixed;
   bottom: 1em;
   right: 1em;
+  z-index: 1;
 }
 
 .circular-menu .floating-btn {
@@ -143,9 +145,10 @@
 .circular-menu.circular-menu-left.active .menu-item:nth-child(4) {
   transform: translate3d(7em, 1em, 0);
 }
-.aboutWrapper {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
+
+.line {
+  border: 2px solid white;
+  width: 3px;
+  height: 100px;
+  margin: 0 auto;
 }
