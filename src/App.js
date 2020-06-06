@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import 'font-awesome/css/font-awesome.min.css';
 import "./App.css"
 import {
@@ -11,18 +11,35 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import 'semantic-ui-css/semantic.min.css'
 import PortfolioCards from "./components/PortfolioCards";
-import Menu from "./components/Menu";
+import Navbar from "./components/Navbar";
+import { AnimatePresence } from "framer-motion";
+
+
+
 
 const App = () => {
+  const pageVariants = {
+    initial: {
+      opacity: 0,
+    },
+    in: {
+      opacity: 1,
+    },
+    out: {
+      opacity: 0,
+    }
+  }
   return (
     <Router>
-      <Menu />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/portfolio" component={PortfolioCards} />
-      </Switch>
+      <Navbar />
+      <AnimatePresence>
+        <Switch>
+          <Route exact path="/" render={() => <Home animate={pageVariants} />} />
+          <Route path="/about" render={() => <About animate={pageVariants} />} />
+          <Route path="/contact" render={() => <Contact animate={pageVariants} />} />
+          <Route path="/portfolio" render={() => <PortfolioCards animate={pageVariants} />} />
+        </Switch>
+      </AnimatePresence>
     </Router>
 
   );
