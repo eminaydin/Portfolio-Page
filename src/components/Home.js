@@ -1,18 +1,24 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Typist from 'react-typist';
+import "react-typist/dist/Typist.css"
 
-class Home extends Component {
-    render() {
-        return (
 
-            <div class="info">
-                <p>Hello, my name is Emin Aydın. I'm a full-stack developer who likes the cats.</p>
-                <p>Check out my latest works at my portfolio page.</p>
-                <p>Feel free to contact me through eminaydin93@yahoo.com or from my contact page.</p>
+const Home = (props) => {
+    console.log(props);
 
-            </div>
+    return (
 
-        );
-    }
+
+        <div class="info">
+            <Typist cursor><span>Hello, my name is Emin Aydın.  I'm a full-stack developer who likes cats.</span><br /><br />
+                <span>Check out my latest works at my portfolio page.</span><br /><br />
+                <span>Feel free to contact me through eminaydin93@yahoo.com or from my contact page.</span><br /><br />
+            </Typist >
+
+        </div>
+
+    );
 }
 
 export default Home;
+
