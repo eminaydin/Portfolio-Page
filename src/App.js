@@ -14,9 +14,6 @@ import PortfolioCards from "./components/PortfolioCards";
 import Navbar from "./components/Navbar";
 import { AnimatePresence } from "framer-motion";
 
-
-
-
 const App = () => {
   const pageVariants = {
     initial: {
@@ -34,10 +31,10 @@ const App = () => {
       <Navbar />
       <AnimatePresence>
         <Switch>
-          <Route exact path="/" render={() => <Home animate={pageVariants} />} />
-          <Route path="/about" render={() => <About animate={pageVariants} />} />
           <Route path="/contact" render={() => <Contact animate={pageVariants} />} />
           <Route path="/portfolio" render={() => <PortfolioCards animate={pageVariants} />} />
+          <Route path="/about" render={() => <About animate={pageVariants} />} />
+          <Route exact path="/" render={() => <Home animate={pageVariants} />} />
         </Switch>
       </AnimatePresence>
     </Router>
