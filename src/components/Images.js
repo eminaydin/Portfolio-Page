@@ -1,11 +1,11 @@
 export const images = {
-    0: "./FormValidation.png",
-    1: "./GithubUserFinder.png",
-    2: "./ReactRouter.png",
-    3: "./ColorGenerator.png",
-    4: "./PasswordGenerator.png",
-    5: "./ProductList.png",
-    6: "./Modal.png",
-    7: "./BlogComments.png",
-    8: "./WeatherApp.png"
+    0: require("./FormValidation.png"),
+    1: require("./GithubUserFinder.png"),
+    2: require("./ReactRouter.png"),
+    3: require("./ColorGenerator.png"),
+    4: require("./PasswordGenerator.png"),
+    5: require("./ProductList.png"),
+    6: require("./Modal.png"),
+    7: require("./BlogComments.png"),
+    8: require("./WeatherApp.png")
 }

@@ -62,7 +62,7 @@ const PortfolioCards = (props) => {
             return (
               <Card raised>
                 <Image
-                  src={require(`${images[userIndex]}`)}
+                  src={`${images[userIndex]}`}
                   wrapped
                   size="large"
                   ui={false}
