@@ -15,13 +15,17 @@ const Contact = (props) => {
       variants={props.animate}
     >
       <Container className="contactWrapper">
-        <div></div>
-        <Container textAlign="center">
-          <motion.h1 className="mailAdress">eminaydin93@yahoo.com</motion.h1>
+        <Container textAlign="center" className="contactInfo">
+          <motion.div>
+            <h1 className="contactHeader"> Contact me</h1>
+            <h1 className="mailAdress">
+              You can contact me directly at eminaydin93@gmx.de
+            </h1>
+          </motion.div>
         </Container>
         <Segment inverted textAlign="center" className="socialIcons">
           <a
-            href="mailto:eminaydin93@yahoo.com"
+            href="mailto:eminaydin93@gmx.de"
             target="_blank"
             rel="noopener noreferrer"
           >

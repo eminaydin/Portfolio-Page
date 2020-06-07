@@ -1,39 +1,26 @@
 body {
   background-color: #2f2f2f !important;
-  height: 100vh;
+  min-height: 100%;
 }
-
+#root {
+  height: 100%;
+}
 .aboutWrapper {
-  display: flex;
-  align-items: center;
-  margin: 0 auto;
   font-size: 25px;
   color: rgb(202, 202, 202);
-  height: 91vh;
+  margin: 5% auto;
 }
 .homeWrapper {
-  display: flex;
-  height: 91vh;
+  margin: 10% auto;
   width: 50%;
   color: rgb(202, 202, 202);
-  align-items: center;
-  margin: 0 auto;
   font-size: 40px;
   line-height: 1.5;
 }
 .contactWrapper {
   display: flex;
-  justify-content: space-between;
-  flex-direction: column;
 }
 
-footer {
-  background: #1b242f;
-  width: 100%;
-  height: 20%;
-  margin-top: 22%;
-  align-items: flex-end;
-}
 .mail:hover {
   color: #a23838;
 }
@@ -43,12 +30,15 @@ footer {
 .github:hover {
   color: wheat;
 }
-
+.contactInfo {
+  margin-top: 25%;
+}
 .socialIcons {
   background: black;
-  padding: 50px;
-  position: fixed;
-  bottom: 0%;
+  position: absolute !important;
+  width: 100%;
+  left: 0;
+  bottom: 0;
 }
 .socialIcons > a {
   color: #2f2f2f;
@@ -59,14 +49,24 @@ footer {
   letter-spacing: 0.2em;
 }
 .mailAdress {
+  text-align: left;
   color: rgb(202, 202, 202);
 }
+.contactHeader {
+  font-size: 50px;
+  text-decoration: underline;
+  color: rgb(202, 202, 202);
+  text-align: left;
+}
+.description > div > h1 {
+  text-decoration: underline;
+}
 
+.modal-btn {
+  margin-bottom: 1rem !important;
+}
 @media only screen and (max-width: 768px) {
   .homeWrapper {
     font-size: 30px;
-  }
-  .aboutWrapper {
-    height: 100%;
   }
 }

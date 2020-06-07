@@ -8,7 +8,7 @@ import {
   Divider,
 } from "semantic-ui-react";
 import data from "../data.json";
-import Portfolio from "./Portfolio";
+import Portfolio from "./PortfolioModal";
 import { images } from "./Images";
 import Moment from "react-moment";
 import { useWindowSize } from "react-hooks-window-size";
@@ -36,7 +36,7 @@ const PortfolioCards = (props) => {
   }, [size]);
   setTimeout(() => {
     setTimeToShowMessage(true);
-  }, 500);
+  }, 5000);
 
   return (
     <motion.div
