@@ -44,7 +44,7 @@ const About = (props) => {
         >
           I'm Berlin based Frontend developer. Relocating to Berlin was a
           major step to have an opportunity to satisfy my curiosity
-          in web development. For almost one year now, I have been trained according to MERN-stack in DCI where I've  also witnessed the joy of creating applications, and pursuing projects on
+          in web development. For almost one year now, I have been trained according to MERN-stack in<a href="https://digitalcareerinstitute.org/" target="_blank" rel="noopener noreferrer"> DCI </a>  where I've  also witnessed the joy of creating applications along with pursuing projects on
           my own. As I'm coming to the end of my studies, I'm not only excited but ready to contribute to a company with my skills while benefiting from their experience.
         </Header>
 

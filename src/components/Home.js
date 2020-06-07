@@ -20,10 +20,10 @@ const Home = (props) => {
         <br />
         <br />
 
-        <span>You can check out my portfolio page to see my work.</span>
+        <span>Jump to portfolio page to see my projects.</span>
         <br />
         <br />
-        <span>Or drop me a message</span>
+        <span>Or drop me a message.</span>
         <br />
         <br />
       </Typist>
