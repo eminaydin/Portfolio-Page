@@ -6,12 +6,10 @@ body {
   height: 100%;
 }
 .aboutWrapper {
-  font-size: 25px;
   color: rgb(202, 202, 202);
-  margin: 5% auto;
 }
 .homeWrapper {
-  margin: 10% auto;
+  margin: 5% auto;
   width: 50%;
   color: rgb(202, 202, 202);
   font-size: 40px;
@@ -29,6 +27,9 @@ body {
 }
 .github:hover {
   color: wheat;
+}
+.xing:hover {
+  color: olive;
 }
 .contactInfo {
   margin-top: 25%;
@@ -69,4 +70,10 @@ body {
   .homeWrapper {
     font-size: 30px;
   }
+}
+.aboutLink,
+.contactLink,
+.portfolioLink {
+  text-decoration: underline;
+  color: inherit;
 }

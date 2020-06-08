@@ -7,13 +7,12 @@ import {
   Header,
   Divider,
 } from "semantic-ui-react";
-import data from "../data.json";
+import data from "../helpers/data.json";
 import Portfolio from "./PortfolioModal";
-import { images } from "./Images";
 import Moment from "react-moment";
 import { useWindowSize } from "react-hooks-window-size";
-import Message from "./Message";
 import { motion } from "framer-motion";
+import { readmeFiles } from "../helpers/Readmes";
 
 const PortfolioCards = (props) => {
   const [index, setIndex] = useState(1);
@@ -23,7 +22,7 @@ const PortfolioCards = (props) => {
     setIndex(index);
     setIsClicked(!isClicked);
   };
-  const [timeToShowMessage, setTimeToShowMessage] = useState(false);
+
   const callbackFunction = (childData) => {
     setIsClicked(childData);
   };
@@ -34,9 +33,6 @@ const PortfolioCards = (props) => {
     if (size.width <= 768) return setItemsPerRow(2);
     if (size.width > 768) return setItemsPerRow(3);
   }, [size]);
-  setTimeout(() => {
-    setTimeToShowMessage(true);
-  }, 5000);
 
   return (
     <motion.div
@@ -46,7 +42,6 @@ const PortfolioCards = (props) => {
       variants={props.animate}
     >
       <Container textAlign="center">
-        {timeToShowMessage && <Message />}
         <Divider horizontal>
           <Header as="h4" inverted>
             <Icon name="code" />
@@ -62,7 +57,7 @@ const PortfolioCards = (props) => {
             return (
               <Card raised>
                 <Image
-                  src={`${images[userIndex]}`}
+                  src={readmeFiles[userIndex].image}
                   wrapped
                   size="large"
                   ui={false}
@@ -88,7 +83,11 @@ const PortfolioCards = (props) => {
             );
           })}
           {isClicked ? (
-            <Portfolio index={index} parentCallback={callbackFunction} />
+            <Portfolio
+              index={index}
+              parentCallback={callbackFunction}
+              data={data}
+            />
           ) : null}
         </Card.Group>
       </Container>
