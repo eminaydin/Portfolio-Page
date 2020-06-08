@@ -39,27 +39,25 @@ const Message = () => {
               truly a huge fan of React, I'm very happy to had a chance on
               helping this community to grow even further. I'm one of the
               translators of React.js official website in Turkish! You can check
-              the github{" "}
+              the github &nbsp;
               <a
                 href="https://github.com/reactjs/tr.reactjs.org/issues/1"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: "#d03f3f" }}
               >
-                {" "}
                 repository
-              </a>{" "}
-              or the{" "}
+              </a>
+              &nbsp; or the &nbsp;
               <a
                 href="https://tr.reactjs.org/docs/release-channels.html"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: "grey" }}
               >
-                {" "}
-                page{" "}
-              </a>{" "}
-              I've translated.
+                page
+              </a>
+              &nbsp; I've translated.
             </h3>
           </Modal.Content>
           <Modal.Actions>

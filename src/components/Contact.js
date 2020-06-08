@@ -23,9 +23,8 @@ const Contact = ({ animate }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {" "}
-                eminaydin93@gmx.de
-              </a>{" "}
+                &nbsp; eminaydin93@gmx.de &nbsp;
+              </a>
               or find me on the social links below.
             </h1>
           </motion.div>

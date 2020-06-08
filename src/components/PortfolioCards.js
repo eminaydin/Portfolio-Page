@@ -6,6 +6,7 @@ import {
   Image,
   Header,
   Divider,
+  Button,
 } from "semantic-ui-react";
 import data from "../helpers/data.json";
 import Portfolio from "./PortfolioModal";
@@ -62,15 +63,16 @@ const PortfolioCards = (props) => {
                   size="large"
                   ui={false}
                   onClick={() => {
-                    const index = data.indexOf(e);
-                    clickHandler(index);
+                    clickHandler(userIndex);
                   }}
                 />
-                <Card.Content>
+                <Card.Content
+                  onClick={() => {
+                    clickHandler(userIndex);
+                  }}
+                >
                   <Card.Header></Card.Header>
-                  <Card.Meta>
-                    <span className="date">{e.name}</span>
-                  </Card.Meta>
+                  <Card.Meta content={`${e.name}`} />
                   <Card.Description>{e.description}</Card.Description>
                 </Card.Content>
                 <Card.Content extra>
@@ -78,6 +80,43 @@ const PortfolioCards = (props) => {
                     <Icon name="calendar alternate outline" />
                     Created: <Moment date={dateToFormat} fromNow />
                   </a>
+                </Card.Content>
+                <Card.Content extra>
+                  <div className="ui two buttons">
+                    <Button
+                      animated="fade"
+                      basic
+                      color="grey"
+                      href={data[userIndex].html_url}
+                      target="_blank"
+                    >
+                      <Button.Content visible>
+                        <Icon color="black" name="github" />
+                        Github repo
+                      </Button.Content>
+                      <Button.Content hidden>
+                        This way to source code
+                      </Button.Content>
+                    </Button>
+                    <Button
+                      animated="fade"
+                      basic
+                      color="red"
+                      content="Live version"
+                      icon="keyboard"
+                      href={data[userIndex].homepage}
+                      target="_blank"
+                    >
+                      <Button.Content visible>
+                        <Icon name="keyboard" />
+                        Live version
+                      </Button.Content>
+                      <Button.Content hidden>
+                        {" "}
+                        Check out how it looks{" "}
+                      </Button.Content>
+                    </Button>
+                  </div>
                 </Card.Content>
               </Card>
             );

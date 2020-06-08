@@ -12,7 +12,6 @@ import Contact from "./components/Contact";
 import 'semantic-ui-css/semantic.min.css'
 import PortfolioCards from "./components/PortfolioCards";
 import Navbar from "./components/Navbar";
-
 const App = () => {
   const pageVariants = {
     initial: {

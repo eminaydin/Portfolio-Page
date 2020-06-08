@@ -19,38 +19,35 @@ const Navbar = () => {
   return (
     <Segment inverted className="navbar">
       <Menu inverted pointing secondary>
-        <Link to="/">
-          {" "}
-          <Menu.Item
-            name="home"
-            active={activeItem === "home"}
-            onClick={handleItemClick}
-          />
-        </Link>
-        <Link to="/about">
-          {" "}
-          <Menu.Item
-            name="about"
-            active={activeItem === "about"}
-            onClick={handleItemClick}
-          />
-        </Link>
-        <Link to="/portfolio">
-          {" "}
-          <Menu.Item
-            name="portfolio"
-            active={activeItem === "portfolio"}
-            onClick={handleItemClick}
-          />
-        </Link>
-        <Link to="/contact">
-          {" "}
-          <Menu.Item
-            name="contact"
-            active={activeItem === "contact"}
-            onClick={handleItemClick}
-          />
-        </Link>
+        <Menu.Item
+          as={Link}
+          to="/"
+          name="home"
+          active={activeItem === "home"}
+          onClick={handleItemClick}
+        />
+
+        <Menu.Item
+          as={Link}
+          to="/about"
+          name="about"
+          active={activeItem === "about"}
+          onClick={handleItemClick}
+        />
+        <Menu.Item
+          as={Link}
+          to="/portfolio"
+          name="portfolio"
+          active={activeItem === "portfolio"}
+          onClick={handleItemClick}
+        />
+        <Menu.Item
+          as={Link}
+          to="/contact"
+          name="contact"
+          active={activeItem === "contact"}
+          onClick={handleItemClick}
+        />
       </Menu>
     </Segment>
   );
