@@ -14,7 +14,7 @@ import {
   DiNpm,
   DiReact,
   DiJavascript1,
-  DiJqueryUiLogo,
+  DiJqueryLogo,
   DiCss3,
   DiMaterializecss,
   DiBootstrap,
@@ -120,7 +120,7 @@ const About = (props) => {
                 <span>Javascript</span>
               </Image>
               <Image>
-                <DiJqueryUiLogo />
+                <DiJqueryLogo />
                 <span>Jquery</span>
               </Image>
               <Image>
