@@ -11,6 +11,7 @@ const Contact = ({ animate }) => {
       exit="out"
       transition={{ duration: 2 }}
       variants={animate}
+      style={{ minHeight: "100%", display: "flex" }}
     >
       <Container className="contactWrapper">
         <Container textAlign="center" className="contactInfo">

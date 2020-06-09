@@ -1,9 +1,6 @@
 body {
   background-color: #2f2f2f !important;
-  min-height: 100%;
-}
-#root {
-  height: 100%;
+  max-height: 100%;
 }
 .aboutWrapper {
   color: rgb(202, 202, 202);
@@ -15,10 +12,6 @@ body {
   font-size: 40px;
   line-height: 1.5;
 }
-.contactWrapper {
-  display: flex;
-}
-
 .mail {
   color: #a23838;
 }
@@ -135,5 +128,10 @@ body {
 @media only screen and (max-width: 768px) {
   .homeWrapper {
     font-size: 30px;
+    width: 80%;
+  }
+  .aboutWrapper {
+    width: 70%;
+    margin: 0 auto;
   }
 }
