@@ -12,6 +12,8 @@ import Contact from "./components/Contact";
 import 'semantic-ui-css/semantic.min.css'
 import PortfolioCards from "./components/PortfolioCards";
 import Navbar from "./components/Navbar";
+import { AnimatePresence } from "framer-motion";
+
 const App = () => {
   const pageVariants = {
     initial: {
@@ -24,15 +26,18 @@ const App = () => {
       opacity: 0,
     }
   }
+
   return (
     <Router>
       <Navbar />
-      <Switch>
-        <Route path="/contact" render={() => <Contact animate={pageVariants} />} />
-        <Route path="/portfolio" render={() => <PortfolioCards animate={pageVariants} />} />
-        <Route path="/about" render={() => <About animate={pageVariants} />} />
-        <Route exact path="/" render={() => <Home animate={pageVariants} />} />
-      </Switch>
+      <AnimatePresence exitBeforeEnter>
+        <Switch>
+          <Route path="/contact" render={() => <Contact animate={pageVariants} />} />
+          <Route path="/portfolio" render={() => <PortfolioCards animate={pageVariants} />} />
+          <Route path="/about" render={() => <About animate={pageVariants} />} />
+          <Route exact path="/" render={() => <Home animate={pageVariants} />} />
+        </Switch>
+      </AnimatePresence>
     </Router>
 
   );
