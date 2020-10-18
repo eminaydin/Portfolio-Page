@@ -1,38 +1,47 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  height: 70vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: #58656d;
+  font-family: "Helvetica Neue", "Open Sans", Arial, sans-serif;
+}
+.information {
+  background-color: #e9e9e9;
+  height: 100%;
+  padding-top: 20px;
+}
+.profile-photo {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 30em;
+  height: 30em;
+}
+.main-text {
+  margin: 60px;
+  vertical-align: middle;
+  display: table-cell;
+  position: relative;
+}
+.main-text-container {
+  flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+.main-header {
+  font-weight: 400;
+  font-size: 19px;
+  font-family: "Open Sans", sans-serif;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.short-description {
+  font-family: "Poppins", sans-serif;
+}
+.Typist > span {
+  font-size: 30px;
+  color: #f19e8e;
+}
+.long-description {
+  font-weight: 200;
+  font-size: 20px;
+}
+.CodeMirror {
+  margin: 2em auto;
 }
