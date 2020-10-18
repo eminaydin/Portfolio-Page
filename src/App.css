@@ -1,9 +1,19 @@
+body {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+}
+#root {
+  width: 80%;
+}
+.main-text-container {
+  font-weight: 300;
+}
 .header {
   height: 70vh;
   display: flex;
   align-items: center;
   color: #58656d;
-  font-family: "Helvetica Neue", "Open Sans", Arial, sans-serif;
 }
 .information {
   background-color: #e9e9e9;
@@ -19,23 +29,22 @@
 .main-text {
   margin: 60px;
   vertical-align: middle;
-  display: table-cell;
-  position: relative;
 }
 .main-text-container {
+  width: 50%;
   flex-direction: column;
 }
 
 .main-header {
-  font-weight: 400;
-  font-size: 19px;
-  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 29px;
 }
-.short-description {
-  font-family: "Poppins", sans-serif;
+.Typist {
+  font-size: 25px;
 }
+
 .Typist > span {
-  font-size: 30px;
+  font-size: 40px;
   color: #f19e8e;
 }
 .long-description {
@@ -44,4 +53,24 @@
 }
 .CodeMirror {
   margin: 2em auto;
+}
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2em;
+  justify-content: space-evenly;
+}
+.github {
+  opacity: 0.5;
+}
+.github:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+.linkedin {
+  opacity: 0.5;
+}
+.linkedin:hover {
+  opacity: 1;
+  transition: 0.5s;
 }

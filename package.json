@@ -11,7 +11,8 @@
     "react-dom": "^16.14.0",
     "react-scripts": "3.4.3",
     "react-scroll-parallax": "^2.3.4",
-    "react-typist": "^2.0.5"
+    "react-typist": "^2.0.5",
+    "react-useanimations": "^2.0.5"
   },
   "scripts": {
     "start": "react-scripts start",
