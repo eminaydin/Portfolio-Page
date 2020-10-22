@@ -3,20 +3,18 @@ body {
   box-sizing: border-box;
   justify-content: center;
 }
-#root {
-  width: 80%;
-}
-.main-text-container {
+
+.main-text {
   font-weight: 300;
 }
 .header {
   height: 70vh;
   display: flex;
-  align-items: center;
+  justify-content: center !important;
+  align-items: center !important;
   color: #58656d;
 }
 .information {
-  background-color: #e9e9e9;
   height: 100%;
   padding-top: 20px;
 }
@@ -30,7 +28,7 @@ body {
   margin: 60px;
   vertical-align: middle;
 }
-.main-text-container {
+.main-text {
   width: 50%;
   flex-direction: column;
 }
@@ -73,4 +71,28 @@ body {
 .linkedin:hover {
   opacity: 1;
   transition: 0.5s;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.description {
+  padding: 0px !important;
+}
+.header {
+  height: unset !important;
+}
+.ui.segment > span {
+  margin-right: 1em;
+}
+.pflanzy {
+  height: 37em;
+}
+.main {
+  background-color: #e9e9e9 !important;
+  height: max-content;
 }
