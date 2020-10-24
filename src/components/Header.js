@@ -15,7 +15,7 @@ const Header = () => {
     <Segment basic className="header">
       <Parallax className="custom-class" y={[-20, 20]} tagOuter="figure">
         <Image src={photo} circular size="medium" />
-        <Segment className="social-icons">
+        <Segment className="social-icons" basic>
           <UseAnimations
             animation={github}
             size={56}
@@ -60,11 +60,11 @@ const Header = () => {
         <Segment basic compact className="description">
           <p className="long-description">
             I'm a Berlin based Frontend Developer. I help companies to build
-            unique and fascinating products. I have a strong interest in tech,
-            therefore I am always looking forward to improve myself. I'm mainly
-            working on React, React-Native and Flutter at the moment. If you are
-            already here, I will be more than happy to be connected. Just reach
-            out to me!
+            unique and well functioning products. I have strong skills/interest
+            in tech, therefore I am always looking forward to improve myself. At
+            the moment, I'm mainly working on React, React-Native and Flutter.
+            If you are still reading, I will be more than happy to get connected
+            with you. Just reach out to me!
           </p>
         </Segment>
       </Segment>
