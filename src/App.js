@@ -8,12 +8,10 @@ import { Segment } from "semantic-ui-react";
 function App() {
   return (
     <ParallaxProvider>
+      <Header />
       <div className="App">
-        <Header />
-        <Segment className="main">
-          <Information />
-          <Projects />
-        </Segment>
+        <Information />
+        <Projects />
       </div>
     </ParallaxProvider>
   );
