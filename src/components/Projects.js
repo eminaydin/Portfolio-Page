@@ -1,19 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import pflanzyGif from "../assets/pflanzy.gif";
 import githubGif from "../assets/github.gif";
 import "semantic-ui-css/semantic.min.css";
 import { Header, Icon, Image, Reveal, Segment } from "semantic-ui-react";
 const Projects = () => {
-  const [isHidden, setIsHidden] = useState(false);
   return (
     <Segment className="projects" basic>
-      <Reveal animated="fade">
-        <Reveal.Content visible>
-          <Segment inverted textAlign="center" compact className="pflanzy">
-            <Header>Sample Project</Header>
-            <Header block inverted>
-              Pflanzy
-            </Header>
+      <Reveal animated="move down">
+        <Reveal.Content visible className="pflanzy-reveal">
+          <Segment textAlign="center" className="pflanzy">
+            <Header>Pflanzy</Header>
             <p>
               Plant care app - built in 6 weeks as a final project at Digital
               Career Institute. Allows you to search through database of plants
@@ -29,21 +25,23 @@ const Projects = () => {
               <span>React-Native</span>
               <span>Redux</span>
               <span>Firebase</span>
-              <span>Expo</span>
             </Segment>
           </Segment>
         </Reveal.Content>
-        <Reveal.Content hidden={isHidden}>
-          <Image src={pflanzyGif} size="medium" />
+        <Reveal.Content>
+          <Image
+            src={pflanzyGif}
+            size="medium"
+            href="https://github.com/Pflanzy/Pflanzy-mobile-app"
+            target="_blank"
+          />
         </Reveal.Content>
       </Reveal>
-      <Reveal animated="small fade">
-        <Reveal.Content visible>
-          <Segment inverted textAlign="center" compact>
-            <Header>Sample Project</Header>
-            <Header block inverted>
-              Github Popular Repositories
-            </Header>
+
+      <Reveal animated="move up">
+        <Reveal.Content visible className="repos-reveal">
+          <Segment textAlign="center" className="repos">
+            <Header>Github Popular Repositories</Header>
             <p>
               Website to search for popular Github repositories of the week that
               has been built in a day. You can simply change the value of
@@ -64,8 +62,13 @@ const Projects = () => {
             </Segment>
           </Segment>
         </Reveal.Content>
-        <Reveal.Content hidden>
-          <Image src={githubGif} size="big" />
+        <Reveal.Content>
+          <Image
+            src={githubGif}
+            size="big"
+            href="https://github.com/eminaydin/github-popular-repositories"
+            target="_blank"
+          />
         </Reveal.Content>
       </Reveal>
     </Segment>
