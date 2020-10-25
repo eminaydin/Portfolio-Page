@@ -1,93 +1,185 @@
 body {
-  background-color: #2f2f2f !important;
-  max-height: 100%;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
 }
-.aboutWrapper {
-  color: rgb(202, 202, 202);
+.App {
+  background-image: linear-gradient(#bdc3c7, #2c3e50);
+  margin-top: 7em;
 }
-.homeWrapper {
-  margin: 5% auto;
+
+.main-text {
+  font-weight: 300;
+}
+.header {
+  height: 70vh;
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+  color: #58656d !important;
+}
+.information {
+  height: 100%;
+  padding-top: 20px;
+}
+.profile-photo {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 30em;
+  height: 30em;
+}
+.main-text {
+  margin: 60px;
+  vertical-align: middle;
+}
+.main-text {
   width: 50%;
-  color: rgb(202, 202, 202);
+  flex-direction: column;
+}
+
+.main-header {
+  font-weight: 300;
+  font-size: 29px;
+}
+.Typist {
+  font-size: 25px;
+  line-height: 1em;
+}
+
+.Typist > span {
   font-size: 40px;
-  line-height: 1.5;
+  color: #f19e8e;
+  line-height: 1em;
 }
-.mail {
-  color: #a23838;
+.long-description {
+  font-weight: 200;
+  font-size: 20px;
 }
-.linkedin {
-  color: #1e70bf;
+.CodeMirror {
+  margin: 2em auto;
+}
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2em;
+  justify-content: space-evenly;
 }
 .github {
-  color: wheat;
+  opacity: 0.5;
 }
-.xing {
-  color: olive;
+.github:hover {
+  opacity: 1;
+  transition: 0.5s;
 }
-.contactInfo {
-  margin-top: 25%;
+.linkedin {
+  opacity: 0.5;
 }
-.socialIcons {
-  background: black;
-  position: absolute !important;
+.linkedin:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.projects {
+  height: 200vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.description {
+  padding: 0px !important;
+}
+.header {
+  height: unset !important;
+}
+.ui.segment > span {
+  margin-right: 1em;
+}
+
+.main {
+  background-color: #e9e9e9 !important;
+  height: max-content;
+}
+
+.pflanzy {
+  height: 38em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around !important;
+  background-color: #f7e7e4 !important;
+}
+.pflanzy-reveal {
   width: 100%;
-  left: 0;
-  bottom: 0;
 }
-.socialIcons > a {
-  color: #2f2f2f;
+.ui.move.reveal > .visible.content.pflanzy-reveal {
+  position: absolute !important;
 }
-@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
-.author {
-  font-family: "Poiret One", cursive !important;
-  letter-spacing: 0.2em;
+.repos {
+  display: flex;
+  flex-direction: column;
+  height: 21.5em;
+  justify-content: space-around !important;
+  background-color: #f7e7e4 !important;
 }
-.mailAdress {
-  text-align: left;
-  color: rgb(202, 202, 202);
+.repos-reveal {
+  width: 100%;
 }
-.contactHeader {
-  font-size: 50px;
-  text-decoration: underline;
-  color: rgb(202, 202, 202);
-  text-align: left;
+.ui.move.reveal > .visible.content.repos-reveal {
+  position: absolute !important;
 }
-.description > div > h1 {
-  text-decoration: underline;
-}
-
-.modal-btn {
-  margin-bottom: 1rem !important;
+.reach-out {
+  font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 1.5em !important;
+  line-height: 1.5em;
+  width: 50%;
+  text-align: center;
+  color: white;
 }
 
-.aboutLink,
-.contactLink,
-.portfolioLink {
-  text-decoration: underline;
-  color: inherit;
-}
-
-.card:hover {
-  cursor: pointer;
-}
-@media only screen and (max-width: 768px) {
-  .homeWrapper {
-    font-size: 30px;
-    width: 80%;
-  }
-  .aboutWrapper {
-    width: 70%;
-    margin: 0 auto;
-  }
-}
 @media only screen and (max-width: 414px) {
-  .card {
-    height: 350px !important;
-    width: 300px !important;
+  body {
+    min-width: fit-content !important;
   }
-}
-.card {
-  height: 400px !important;
-  width: 360px !important;
-  margin: 10px !important;
+  .header {
+    flex-direction: column !important;
+  }
+  .Typist {
+    font-size: 5em !important;
+  }
+  .Typist > span {
+    font-size: 1em;
+  }
+  .long-description {
+    font-size: 26px;
+  }
+  .main-text {
+    width: 100%;
+    margin-top: 8em !important;
+  }
+  .CodeMirror-code {
+    font-size: 25px;
+    line-height: 1em;
+  }
+  .CodeMirror.cm-s-hopscotch.CodeMirror-wrap {
+    width: 100% !important;
+  }
+  .segment.pflanzy > .ui.header {
+    font-size: 25px;
+  }
+  .segment.pflanzy > p {
+    font-size: 16px;
+    line-height: 1.8em;
+  }
+  .segment.repos > .ui.header {
+    font-size: 25px;
+  }
+  .segment.repos > p {
+    font-size: 16px;
+    line-height: 1.8em;
+  }
+  .reach-out {
+    font-size: 2em !important;
+    width: 100%;
+  }
 }
