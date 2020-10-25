@@ -17,10 +17,7 @@ const Projects = () => {
               notifications to remind you when to care and customize your plants
               for more individual feeling.
             </p>
-            <Header subheader>
-              <Icon name="computer" />
-              <Header.Content>Tech Stack</Header.Content>
-            </Header>
+
             <Segment>
               <span>React-Native</span>
               <span>Redux</span>
@@ -50,10 +47,7 @@ const Projects = () => {
               are stored on local storage therefore will be available for you on
               the other tab anytime you pay a visit back.
             </p>
-            <Header subheader>
-              <Icon name="computer" />
-              <Header.Content>Tech Stack</Header.Content>
-            </Header>
+
             <Segment>
               <span>React</span>
               <span>Redux</span>
@@ -71,6 +65,43 @@ const Projects = () => {
           />
         </Reveal.Content>
       </Reveal>
+      <Segment className="reach-out" basic>
+        <p>
+          Development is like a chess. You have to think of edge cases before
+          you make a move, you need a lot of{" "}
+          <span style={{ color: "#f19e8e", textDecoration: "underline" }}>
+            patience
+          </span>
+          , you need{" "}
+          <span style={{ color: "#f19e8e", textDecoration: "underline" }}>
+            {" "}
+            empathy
+          </span>{" "}
+          and you also need a{" "}
+          <span style={{ color: "#f19e8e", textDecoration: "underline" }}>
+            long-term mindset
+          </span>
+          . If you need all of these, look no more and say
+          <a
+            onClick={() =>
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              })
+            }
+            style={{
+              marginLeft: "0.2em",
+              cursor: "pointer",
+              color: "#f19e8e",
+              fontSize: "20px",
+              fontWeight: "900",
+            }}
+          >
+            HI
+          </a>
+          !
+        </p>
+      </Segment>
     </Segment>
   );
 };
