@@ -16,20 +16,24 @@ const Header = () => {
       <Parallax className="custom-class" y={[-20, 20]} tagOuter="figure">
         <Image src={photo} circular size="medium" />
         <Segment className="social-icons" basic>
-          <UseAnimations
-            animation={github}
-            size={56}
-            strokeColor="#58656d"
-            wrapperStyle={{ padding: 100, padding: "unset" }}
-            className="github"
-          />
-          <UseAnimations
-            animation={linkedin}
-            size={56}
-            strokeColor="#58656d"
-            wrapperStyle={{ padding: 100, padding: "unset" }}
-            className="linkedin"
-          />
+          <a href="https://github.com/eminaydin" target="_blank">
+            <UseAnimations
+              animation={github}
+              size={56}
+              strokeColor="#58656d"
+              wrapperStyle={{ padding: 100, padding: "unset" }}
+              className="github"
+            />
+          </a>
+          <a href="https://www.linkedin.com/in/emin-aydin/" target="_blank">
+            <UseAnimations
+              animation={linkedin}
+              size={56}
+              strokeColor="#58656d"
+              wrapperStyle={{ padding: 100, padding: "unset" }}
+              className="linkedin"
+            />
+          </a>
         </Segment>
       </Parallax>
       <Segment basic className="main-text" textAlign="left">
