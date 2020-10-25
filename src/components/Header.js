@@ -16,21 +16,29 @@ const Header = () => {
       <Parallax className="custom-class" y={[-20, 20]} tagOuter="figure">
         <Image src={photo} circular size="medium" />
         <Segment className="social-icons" basic>
-          <a href="https://github.com/eminaydin" target="_blank">
+          <a
+            href="https://github.com/eminaydin"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <UseAnimations
               animation={github}
               size={56}
               strokeColor="#58656d"
-              wrapperStyle={{ padding: 100, padding: "unset" }}
+              wrapperStyle={{ padding: "unset" }}
               className="github"
             />
           </a>
-          <a href="https://www.linkedin.com/in/emin-aydin/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/emin-aydin/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <UseAnimations
               animation={linkedin}
               size={56}
               strokeColor="#58656d"
-              wrapperStyle={{ padding: 100, padding: "unset" }}
+              wrapperStyle={{ padding: "unset" }}
               className="linkedin"
             />
           </a>

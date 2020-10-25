@@ -2,7 +2,7 @@ import React from "react";
 import pflanzyGif from "../assets/pflanzy.gif";
 import githubGif from "../assets/github.gif";
 import "semantic-ui-css/semantic.min.css";
-import { Header, Icon, Image, Reveal, Segment } from "semantic-ui-react";
+import { Header, Image, Reveal, Segment } from "semantic-ui-react";
 const Projects = () => {
   return (
     <Segment className="projects" basic>
@@ -82,7 +82,7 @@ const Projects = () => {
             long-term mindset
           </span>
           . If you need all of these, look no more and say
-          <a
+          <span
             onClick={() =>
               window.scrollTo({
                 top: 0,
@@ -98,7 +98,7 @@ const Projects = () => {
             }}
           >
             HI
-          </a>
+          </span>
           !
         </p>
       </Segment>
